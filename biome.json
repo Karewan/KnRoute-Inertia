@@ -1,0 +1,68 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"files": {
+		"includes": [
+			"samples/**",
+			"!samples/public/build",
+			"!samples/ssr",
+			"!**/node_modules",
+			".vscode/**",
+			"biome.json",
+			"composer.json",
+			"package.json"
+		]
+	},
+	"formatter": {
+		"enabled": true,
+		"lineEnding": "lf",
+		"indentWidth": 4,
+		"indentStyle": "tab",
+		"lineWidth": 100,
+		"bracketSameLine": true,
+		"bracketSpacing": true,
+		"attributePosition": "auto",
+		"expand": "always",
+		"formatWithErrors": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"style": {
+				"useBlockStatements": "on"
+			}
+		}
+	},
+	"assist": {
+		"enabled": true
+	},
+	"html": {
+		"experimentalFullSupportEnabled": true,
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"overrides": [
+		{
+			"includes": [
+				"**/*.vue"
+			],
+			"linter": {
+				"rules": {
+					"style": {
+						"useConst": "off",
+						"useImportType": "off"
+					},
+					"correctness": {
+						"noUnusedVariables": "off",
+						"noUnusedImports": "off"
+					}
+				}
+			}
+		}
+	]
+}

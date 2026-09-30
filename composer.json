@@ -1,0 +1,39 @@
+{
+	"name": "karewan/knroute-inertia",
+	"description": "Fast Inertia.js v3 server-side adapter for the KnRoute PHP 8.3+ router",
+	"keywords": [
+		"inertia",
+		"inertiajs",
+		"knroute",
+		"router",
+		"adapter",
+		"spa",
+		"ssr",
+		"vue",
+		"fast"
+	],
+	"type": "library",
+	"license": "MIT",
+	"homepage": "https://github.com/Karewan/KnRoute-Inertia",
+	"authors": [
+		{
+			"name": "Florent VIALATTE",
+			"role": "developer",
+			"homepage": "https://github.com/Karewan"
+		}
+	],
+	"require": {
+		"php": ">=8.3",
+		"ext-json": "*",
+		"karewan/knroute": "^4.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"Karewan\\KnRouteInertia\\": "src/"
+		}
+	},
+	"scripts": {
+		"test": "php tests/run.php",
+		"bench": "php -d opcache.enable_cli=1 -d opcache.jit=off benchmarks/run.php"
+	}
+}
